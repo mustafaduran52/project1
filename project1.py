@@ -27,19 +27,19 @@ for team in teams:
 print()
 response = int(input("On which team would you like to compete for?(1/4): "))
 
-if response == "1":
+if response == 1:
     print("Congratulations! You are off to Turkiye to start your career!")
 
-elif response == "2":
+elif response == 2:
     print("Congratulations! You are off to England to start your career!")    
 
-elif response == "3":
+elif response == 3:
     print("Congratulations! You are off to Spain to start your career!")
     
-elif response == "4":
+elif response == 4:
     print("Congratulations! You are off to Belgium to start your career!")
 
-while response in range (1, 4):
+while response in range (1, 5):
       print(response)
 else:
       print("Invalid answer! Please read again!")
