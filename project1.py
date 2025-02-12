@@ -43,7 +43,10 @@ while response in range (1, 5):
       print(response)
 else:
       print("Invalid answer! Please read again!")
-      response = int(input("On which team would you like to compete for?(1/4): "))   
+      response = int(input("On which team would you like to compete for?(1/4): ")) 
+
+print(f"Congratulations {name}! You have signed your first proffessional contract with {team}")
+time.sleep(2)
          
 
          
