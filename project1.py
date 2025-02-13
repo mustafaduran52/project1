@@ -27,27 +27,28 @@ for team in teams:
 print()
 response = int(input("On which team would you like to compete for?(1/4): "))
 
-response = 1 or 2 or 3 or 4
+
 while True:
-         
-if response == 1:
-    print("Congratulations! You are off to Turkiye to start your career!")
 
-elif response == 2:
-    print("Congratulations! You are off to England to start your career!")    
+    if response == 1:
+        print("Congratulations! You are off to Turkiye to start your career!")
 
-elif response == 3:
-    print("Congratulations! You are off to Spain to start your career!")
+    elif response == 2:
+        print("Congratulations! You are off to England to start your career!")    
+
+    elif response == 3:
+        print("Congratulations! You are off to Spain to start your career!")
+        
+    elif response == 4:
+        print("Congratulations! You are off to Belgium to start your career!")
+    else:   
+        int(input("On which team would you like to compete for?(1/4): ")     
     
-elif response == 4:
-    print("Congratulations! You are off to Belgium to start your career!")
-else:   
-    int(input("On which team would you like to compete for?(1/4): ")     
-
-print(f"Congratulations {name}! You have signed your first proffessional contract with {team}")
-time.sleep(2)
-         
-
+    print(f"Congratulations {name}! You have signed your first proffessional contract with {team}")
+    break
+    time.sleep(2)
+             
+    
          
 
     
