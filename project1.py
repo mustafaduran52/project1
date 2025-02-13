@@ -48,7 +48,7 @@ while True:
     break
     time.sleep(2)
              
-    
+print(f"Highly anticipated young player made his decision, as reports claim {name} signed a 4-year deal contract with {team}!")   
          
 
     
