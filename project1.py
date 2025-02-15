@@ -27,30 +27,31 @@ for team in teams:
 print()
 response = int(input("On which team would you like to compete for?(1/4): "))
 
-
 while True:
-
     if response == 1:
-        print("Congratulations! You are off to Turkiye to start your career!")
-        team = "1.Orduspor 🇹🇷 (Turkish League 2nd division)"
-        break
+       team = "Orduspor🟣⚪️ 🇹🇷"    
+       print("Congrats! You are off to Turkiye to start your career")
+       break
     elif response == 2:
-        print("Congratulations! You are off to England to start your career!")    
-        team = "1.Orduspor 🇹🇷 (Turkish League 2nd division)"
+        team = "Barrow🔵⚪️ 🏴󠁧󠁢󠁥󠁮󠁧󠁿 "
+        print("Congrats! You are off to England to start your career")
         break
     elif response == 3:
-        print("Congratulations! You are off to Spain to start your career!")
-        team = "1.Orduspor 🇹🇷 (Turkish League 2nd division)"
+        team = "Tenerife⚪️🔵 🇪🇸"
+        print("Congrats! You are off to Spain to start your career")
         break
     elif response == 4:
-        print("Congratulations! You are off to Belgium to start your career!")
+        team = "Patro Eisden🔵⚫️  🇧🇪"
+        print("Congrats! You are off to Belgium to start your career")
         break
-    else:   
-        int(input("On which team would you like to compete for?(1/4): ")     
-    
-print(f"Congratulations {name}! You have signed your first proffessional contract with {team}"
+    else: 
+        int(input("On which team would you like to compete for?(1/4): "))
+
+print(f"Congratulations {name}! You have signed your first professional contract with 📝 {team}")
 time.sleep(2)
-print(f"Highly anticipated young player made his decision, as reports claim {name} signed a 4-year deal contract with {team}!")   
+print(f"Highly anticipated young player made his decision, as reports claim {name} signed a 4-year deal contract with: {team}!")
+
+   
          
 
     
