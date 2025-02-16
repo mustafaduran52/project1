@@ -16,32 +16,36 @@ print("💡 Think carefully about your decision! Here are the teams interested:"
 time.sleep(3)
 
 print()
-teams = ("1.Orduspor 🇹🇷 (Turkish League 2nd division)",
-         "2.Barrow 🏴󠁧󠁢󠁥󠁮󠁧󠁿 (English League 3rd division)",
-         "3.Tenerife 🇪🇸 (Spanish League 3rd division)",
-         "4.Patro Eisden 🇧🇪 (Belgian League 2nd division)")
+teams = {
+    "Orduspor🟣⚪️🇹🇷": {"coach": "Mert Müldür", "captain": "Mehmet Öz"},
+    "Barrow🔵⚪️🏴": {"coach": "Scott Carson", "captain": "Liam Delap"},
+    "Tenerife⚪️🔵🇪🇸": {"coach": "Iago Aspas", "captain": "Andres Parejo"},
+    "Patro Eisden🔵⚫️🇧🇪": {"coach": "Thorgan Hazard", "captain": "Jan Vertonghen"}
+}
 
 for team in teams:
     print(f"{team}")
 
+
 print()
 response = int(input("On which team would you like to compete for?(1/4): "))
 
+
 while True:
     if response == 1:
-       team = "Orduspor🟣⚪️ 🇹🇷"    
+       team1 = "Orduspor🟣⚪️ 🇹🇷"    
        print("Congrats! You are off to Turkiye to start your career")
        break
     elif response == 2:
-        team = "Barrow🔵⚪️ 🏴󠁧󠁢󠁥󠁮󠁧󠁿 "
+        team2 = "Barrow🔵⚪️ 🏴󠁧󠁢󠁥󠁮󠁧󠁿 "
         print("Congrats! You are off to England to start your career")
         break
     elif response == 3:
-        team = "Tenerife⚪️🔵 🇪🇸"
+        team3 = "Tenerife⚪️🔵 🇪🇸"
         print("Congrats! You are off to Spain to start your career")
         break
     elif response == 4:
-        team = "Patro Eisden🔵⚫️  🇧🇪"
+        team4 = "Patro Eisden🔵⚫️  🇧🇪"
         print("Congrats! You are off to Belgium to start your career")
         break
     else: 
@@ -51,10 +55,8 @@ print(f"Congratulations {name}! You have signed your first professional contract
 time.sleep(2)
 print(f"Highly anticipated young player made his decision, as reports claim {name} signed a 4-year deal contract with: {team}!")
 
-   
-         
+team = teams[response]["name"]
+coach = teams[response]["coach"]
 
-    
-
-
-
+print(f"Your coach {coach} wants to speak to you")
+print(f"Hint: Be careful in your conversations with the {coach}, your playing time might be effected based on your dialogues")
