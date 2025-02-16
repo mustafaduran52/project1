@@ -61,4 +61,6 @@ coach = teams[response]["coach"]
 print(f"Your coach {coach} wants to speak to you")
 print(f"Hint: Be careful in your conversations with the {coach}, your playing time might be effected based on your dialogues")
 
+print(f"{coach}: Welcome to the family {name}! I would like to tell you that you made the best decision choosing teams[response]!
+
 
