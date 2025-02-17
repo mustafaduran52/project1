@@ -73,19 +73,27 @@ for char in hint_text:
 print("\n")    
 
 time.sleep(1)
+
+print(f"{coach}: Welcome to {team}, {name}! I want to tell you that you made the best decision joining us\n")
+time.sleep(2)
+
+response = input(f"+: Thanks Mr.{coach}, I am excited to start and contribute.\n\n"
+                 "-: Honestly, y'all are lucky I chose here, you are going to make millions off my transfer fee \n"
+                 "Enter (+) or (-): ")
+
 rel_coach = 5
 if response == "-":
-    rel_coach - 1
+    print(f"{coach}: I am very disappointed with your approach")
+    rel_coach -= 1
 elif response == "+":
-    rel_coach + 1
+    print(f"{coach}: I like your attitude. We are all thrilled by your talents, let's begin")
+    rel_coach += 1
 else:
     print("Please choose a valid answer (+) or (-)")
 
-response = input(f"{coach}: Welcome to the family {name}! I would like to tell you that you made the best decision choosing {team}.\n\n"
-                 "Choose your answer \n"
-                 "+: Honestly coach, y'all are lucky to have me on this team\n"
-                 "-: I'm excited on this journey and I would like to start as soon as possible!\n"
-                 "Enter (+) or (-):" )
+time.sleep(2)
+print(f"Your relationship with {coach} is now {rel_coach}/10")
+
 
 
 
