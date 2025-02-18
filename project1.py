@@ -1,17 +1,17 @@
 import time
 
 print("Welcome to the game! 🤩")
-time.sleep(1)
+time.sleep(2)
 
 name = input("Please enter your baller name to start your career: ")
-time.sleep(1)
+time.sleep(2)
 
 print(f"☝ Okay {name} are you ready to be the best footballer on earth?")
-time.sleep(1)
+time.sleep(2)
 
 input("Press enter key to start!")
 print("⚽️ After successfully competing in underage leagues, there are teams who wants to recruit you!")
-time.sleep(1)
+time.sleep(2)
 print("💡 Think carefully about your decision! Here are the teams interested:")
 time.sleep(2)
 
@@ -63,7 +63,7 @@ while True:
             response = int(response)
         else:
             response = 0    #Forces the loop to run again if input is not a number
-
+time.sleep(2)
 print(f"Congratulations {name}! You have signed your first professional contract with 📝 {team}")
 time.sleep(2)
 
@@ -89,12 +89,14 @@ response = input(f"+: Thanks Mr.{coach}, I am excited to start and contribute.\n
                  "-: Honestly, y'all are lucky I chose here, you are going to make millions off my transfer fee \n"
                  "Enter (+) or (-): ")
 
+#Relationships
+
 rel_coach = 5
 if response == "-":
-    print(f"{coach}: I am very disappointed with your approach")
+    print(f"{coach}: I am very disappointed with your approach.")
     rel_coach -= 1
 elif response == "+":
-    print(f"{coach}: I like your attitude. We are all thrilled by your talents, let's begin")
+    print(f"{coach}: I like your attitude. Let's keep the work going.")
     rel_coach += 1
 else:
     print("Please choose a valid answer (+) or (-)")
@@ -105,7 +107,8 @@ print()
 
 print(f"According to reporters, there is a meeting to be held at {team}.")
 time.sleep(2)
-print(f"This meeting will involve couple of the new-comers, including {name}, {captain}, and {coach} ")
+print(f"This meeting will involve couple of the new-comers, including {name}, the team's captain {captain}, and {coach} ")
+print()
 time.sleep(2)
 
 # The Meeting
@@ -126,6 +129,45 @@ else:
 print(f"{coach}: Alright boys! I have gathered you all here to have a word with you about the upcoming season, welcome!")
 time.sleep(2)
 print(f"{coach}: As you are all aware as {team}, we aim to become one of the first two teams to get the promotion for the {league}")
+time.sleep(2)
+print()
+print(f"{captain}: We will give everything for the fans {coach}, trust this group.")
+time.sleep(2)
+print()
+response = input("+: Even though I am new, I understood this club's values from day one, we will give everything on the pitch and thrive\n\n"
+                 f"-: I was wondering about my playing time {coach}, hope you can address that\n"
+                 "Enter (+) or (-): ")
+
+time.sleep(2)
+
+rel_team = 5
+if response == "-":
+    rel_team -=1
+
+elif response == "+":
+    rel_team +1
+
+else:
+    print("Please choose a valid answer (+) or (-)")
+time.sleep(2)
+print(f"Your relationship with the captain {captain} is now {rel_team}/10")            
+
+
+if response == "-":
+    print(f"{coach}: There is time and place for everything, I feel like now it was not the time to discuss this {name} ")
+    print()
+    rel_coach -= 1
+elif response == "+":
+    print(f"{coach}: This means a lot, hope all of the new-comers feel like you {name}")
+    print()
+
+time.sleep(2)
+print(f"Your relationship with {coach} is now {rel_coach}/10\n")
+print()
+
+print(f"After a long pre-season period for {team}, they are about to play their first official game! ")
+time.sleep(2)
+print()
 
 
 
