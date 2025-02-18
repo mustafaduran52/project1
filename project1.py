@@ -63,7 +63,23 @@ while True:
             response = int(response)
         else:
             response = 0    #Forces the loop to run again if input is not a number
-time.sleep(2)
+            
+opp_teams = []
+
+if response == 1:
+    opp_teams = ["Manisaspor", "Ümraniyespor", "Kocaelispor", "Sakaryaspor", "Pendik", "Sariyer FK", "Erzurumspor", "Bursaspor"]
+
+elif response == 2:
+    opp_teams = ["Hull City", "Coventry", "Wigan Athletic", "West Bromwich", "Swansea", "Bristol City", "Leeds United", "Derby County"]
+
+elif response == 3:
+    opp_teams = ["Leganes", "Eibar", "Almeria", "Las Palmas", "Cadiz", "Huesca", "Real Oviedo", "Elche"] 
+
+elif response == 4:
+    opp_teams  = ["Herent", "Leisden", "Mechelen", "Drongen", "Kontich", "Moldavo", "Sporting Hasselt", "Mons"]
+
+
+print(opp_teams)                 time.sleep(2)
 print(f"Congratulations {name.capitalize()}! You have signed your first professional contract with 📝 {team}")
 time.sleep(2)
 
@@ -187,10 +203,4 @@ elif response == 4:
     opp_teams  = ["Herent", "Leisden", "Mechelen", "Drongen", "Kontich", "Moldavo", "Sporting Hasselt", "Mons"]
 
 
-print(opp_teams)                 
-
-
-
-
-
-
+                
