@@ -185,7 +185,23 @@ print(f"After a long pre-season period for {team}, they are about to play their 
 time.sleep(2)
 print()
 
-# Starting the League
+# Building the League
+
+opponent = random.choice(opp_teams)
+chances_ingame = 0
+rel_team == chances_ingame
+first_game = f"{team} - {opponent}"
+
+if rel_coach <= 3:
+    print(f"You are on the bench for this match!")
+
+elif rel_coach >= 4 and 8:
+    print(f"You are starting the game!")
+
+else:
+    print(f"Your coach is starting you as the vice captain!")
+
+print(f"We are ready to proceed with the {first_game}")
 
 
 
