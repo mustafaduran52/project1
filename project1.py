@@ -1,5 +1,7 @@
 import time
 
+import random
+
 print("Welcome to the game! 🤩")
 time.sleep(2)
 
@@ -63,7 +65,7 @@ while True:
             response = int(response)
         else:
             response = 0    #Forces the loop to run again if input is not a number
-            
+
 opp_teams = []
 
 if response == 1:
@@ -77,6 +79,7 @@ elif response == 3:
 
 elif response == 4:
     opp_teams  = ["Herent", "Leisden", "Mechelen", "Drongen", "Kontich", "Moldavo", "Sporting Hasselt", "Mons"]
+
 
 time.sleep(2)
 print(f"Congratulations {name.capitalize()}! You have signed your first professional contract with 📝 {team}")
@@ -190,21 +193,20 @@ print()
 opponent = random.choice(opp_teams)
 chances_ingame = 0
 rel_team == chances_ingame
-first_game = f"{team} - {opponent}"
+games = f"{team} - {opponent}"
 
 if rel_coach <= 3:
-    print(f"You are on the bench for this match!")
+    print(f"You are on the bench for this match! 🪑 ")
+    chances_ingame = random.randint(1, 5)
 
 elif rel_coach >= 4 and 8:
-    print(f"You are starting the game!")
+    print(f"You are starting the game! 🏃🏽‍♂️ ")
 
 else:
-    print(f"Your coach is starting you as the vice captain!")
+    print(f"Your coach is starting you as the vice captain! Ⓒ ")
+    chances_ingame = random.randint(3, 7)
 
-print(f"We are ready to proceed with the {first_game}")
+time.sleep(2)    
 
-
-
-
-
-                
+print(f"We are ready to proceed with the {games}, first game of the season! ")
+time.sleep(2)
