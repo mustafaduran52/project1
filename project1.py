@@ -1,5 +1,4 @@
 import time
-
 import random
 
 print("Welcome to the game! 🤩")
@@ -69,16 +68,16 @@ while True:
 opp_teams = []
 
 if response == 1:
-    opp_teams = ["Manisaspor", "Ümraniyespor", "Kocaelispor", "Sakaryaspor", "Pendik", "Sariyer FK", "Erzurumspor", "Bursaspor"]
+    opp_teams = ["Manisaspor", "Ümraniyespor", "Kocaelispor", "Sakaryaspor", "Pendik", "Sariyer FK", "Erzurumspor", "Bursaspor", "{team}"]
 
 elif response == 2:
-    opp_teams = ["Hull City", "Coventry", "Wigan Athletic", "West Bromwich", "Swansea", "Bristol City", "Leeds United", "Derby County"]
+    opp_teams = ["Hull City", "Coventry", "Wigan Athletic", "West Bromwich", "Swansea", "Bristol City", "Leeds United", "Derby County, "{team}"]
 
 elif response == 3:
-    opp_teams = ["Leganes", "Eibar", "Almeria", "Las Palmas", "Cadiz", "Huesca", "Real Oviedo", "Elche"] 
+    opp_teams = ["Leganes", "Eibar", "Almeria", "Las Palmas", "Cadiz", "Huesca", "Real Oviedo", "Elche", "{team}"] 
 
 elif response == 4:
-    opp_teams  = ["Herent", "Leisden", "Mechelen", "Drongen", "Kontich", "Moldavo", "Sporting Hasselt", "Mons"]
+    opp_teams  = ["Herent", "Leisden", "Mechelen", "Drongen", "Kontich", "Moldavo", "Sporting Hasselt", "Mons", "{team}"]
 
 
 time.sleep(2)
