@@ -2,19 +2,19 @@ import time
 import random
 
 print("Welcome to the game! 🤩")
-time.sleep(2)
+
 
 name = input("Please enter your baller name to start your career: ")
-time.sleep(2)
+
 
 print(f"☝ Okay {name.capitalize()} are you ready to be the best footballer on earth?")
-time.sleep(2)
+
 
 input("Press enter key to start!")
 print("⚽️ After successfully competing in underage leagues, there are teams who wants to recruit you!")
-time.sleep(2)
+
 print("💡 Think carefully about your decision! Here are the teams interested:")
-time.sleep(2)
+
 
 print()
 teams = {
@@ -29,7 +29,7 @@ for team in teams:
 
 
 print()
-time.sleep(1)
+
 response = int(input("On which team would you like to compete for?(1/4): "))
 
 
@@ -68,27 +68,27 @@ while True:
 opp_teams = []
 
 if response == 1:
-    opp_teams = ["Manisaspor", "Ümraniyespor", "Kocaelispor", "Sakaryaspor", "Pendik", "Sariyer FK", "Erzurumspor", "Bursaspor", "{team}"]
+    opp_teams = ["Manisaspor", "Ümraniyespor", "Kocaelispor", "Sakaryaspor", "Pendik", "Sariyer FK", "Erzurumspor"]
 
 elif response == 2:
-    opp_teams = ["Hull City", "Coventry", "Wigan Athletic", "West Bromwich", "Swansea", "Bristol City", "Leeds United", "Derby County, "{team}"]
+    opp_teams = ["Hull City", "Coventry", "Wigan Athletic", "West Bromwich", "Swansea", "Bristol City", "Leeds United"]
 
 elif response == 3:
-    opp_teams = ["Leganes", "Eibar", "Almeria", "Las Palmas", "Cadiz", "Huesca", "Real Oviedo", "Elche", "{team}"] 
+    opp_teams = ["Leganes", "Eibar", "Almeria", "Las Palmas", "Cadiz", "Huesca", "Real Oviedo",] 
 
 elif response == 4:
-    opp_teams  = ["Herent", "Leisden", "Mechelen", "Drongen", "Kontich", "Moldavo", "Sporting Hasselt", "Mons", "{team}"]
+    opp_teams  = ["Herent", "Leisden", "Mechelen", "Drongen", "Kontich", "Moldavo", "Sporting Hasselt"]
+     
 
 
-time.sleep(2)
 print(f"Congratulations {name.capitalize()}! You have signed your first professional contract with 📝 {team}")
-time.sleep(2)
+
 
 print(f"Highly anticipated young player made his decision, as reports claim {name.capitalize()} signed a 4-year deal contract with: {team}!")
-time.sleep(2)
+
 
 print(f"Your coach {coach} wants to speak to you 🗣️")
-time.sleep(2)
+
 
 print("\n" + "="*50)
 hint_text = f"⚠️ HINT: BE CAREFUL IN YOUR CONVERSATIONS WITH {coach}! 🔥 YOUR PLAYING TIME MIGHT BE AFFECTED BASED ON YOUR DIALOGUES."
@@ -97,10 +97,10 @@ for char in hint_text:
     time.sleep(0.05)  # Adjust speed (lower = faster)
 print("\n")    
 
-time.sleep(2)
+
 
 print(f"{coach}: Welcome to {team}, {name.capitalize()}! I want to tell you that you made the best decision joining us\n")
-time.sleep(2)
+
 
 response = input(f"+: Thanks Mr.{coach}, I am excited to start and contribute.\n\n"
                  "-: Honestly, y'all are lucky I chose here, you are going to make millions off my transfer fee \n"
@@ -118,44 +118,49 @@ elif response == "+":
 else:
     print("Please choose a valid answer (+) or (-)")
 
-time.sleep(2)
+
 print(f"Your relationship with {coach} is now {rel_coach}/10\n")
 print()
 
 print(f"According to reporters, there is a meeting to be held at {team}.")
-time.sleep(3)
+
 print(f"This meeting will involve couple of the new-comers, including {name.capitalize()}, the team's captain {captain}, and {coach} ")
 print()
-time.sleep(3)
+
 
 # The Meeting
 
 if team == "Orduspor🟣⚪️":
+    your_team = "Orduspor🟣⚪️"
     league = "Turkish Super League"
 
 elif team == "Barrow🔵⚪️":
-    league = "Premier League"
+     your_team = "Barrow🔵⚪️"
+     league = "Premier League"
 
 elif team == "Tenerife⚪️🔵":
+    your_team = "Tenerife⚪️🔵"
     league = "La Liga"   
           
 else:
+    your_team = "Patro Eisden🔵⚫️"
     league = "Belgian Pro League"
+    
 
 print()
 print(f"{coach}: Alright boys! I have gathered you all here to have a word with you about the upcoming season, welcome!")
-time.sleep(3)
+
 print(f"{coach}: As you are all aware as {team}, we aim to become one of the first two teams to get the promotion for the {league}")
-time.sleep(3)
+
 print()
 print(f"{captain}: We will give everything for the fans {coach}, trust this group.")
-time.sleep(3)
+
 print()
 response = input("+: Even though I am new, I understood this club's values from day one, we will give everything on the pitch and thrive\n\n"
                  f"-: I was wondering about my playing time {coach}, hope you can address that\n"
                  "Enter (+) or (-): ")
 
-time.sleep(2)
+
 
 rel_team = 5
 if response == "-":
@@ -166,7 +171,7 @@ elif response == "+":
 
 else:
     print("Please choose a valid answer (+) or (-)")
-time.sleep(2)
+
 print(f"Your relationship with the captain {captain} is now {rel_team}/10")            
 print()
 
@@ -179,33 +184,55 @@ elif response == "+":
     rel_coach += 1
     print()
 
-time.sleep(2)
+
 print(f"Your relationship with {coach} is now {rel_coach}/10\n")
 print()
 
 print(f"After a long pre-season period for {team}, they are about to play their first official game! ")
-time.sleep(2)
+
 print()
 
 # Building the League
 
+played_matches = []  # Step 1: Create an empty list to track played teams
+
+for _ in range(len(opp_teams)):  # Step 2: Loop through opp_teams' length (play each team once)
+    opponent = random.choice([team for team in opp_teams if team not in played_matches])  
+    played_matches.append(opponent)  # Step 3: Add the chosen opponent to played_matches
+    print(f"{your_team} vs {opponent}")  # Step 4: Print the match
+
+
+
 opponent = random.choice(opp_teams)
 chances_ingame = 0
-rel_team == chances_ingame
-games = f"{team} - {opponent}"
+match_fixture = []
+match_actions = ("goal ⚽️ ", "assist 🤝 ", "foul 🤕 ", "dribbling 💨 ", "tackle 🛝 ", "bad pass 👎🏽 " )
+
+for opponent in opp_teams:
+    match = f"{team} vs {opponent}"
+    match_fixture.append(match)
+
+for match in match_fixture:
+    print(match)    
+
 
 if rel_coach <= 3:
     print(f"You are on the bench for this match! 🪑 ")
     chances_ingame = random.randint(1, 5)
 
-elif rel_coach >= 4 and 8:
+elif 4 <= rel_coach <= 8:
     print(f"You are starting the game! 🏃🏽‍♂️ ")
+    chances_ingame = random.randint(6, 10)
 
 else:
     print(f"Your coach is starting you as the vice captain! Ⓒ ")
     chances_ingame = random.randint(3, 7)
 
-time.sleep(2)    
+    
 
-print(f"We are ready to proceed with the {games}, first game of the season! ")
-time.sleep(2)
+print(f"We are ready to proceed with the {match}, for the first game of the season! ")
+
+
+print("The referee blew the whistle and the game has started! ⌚️ ") 
+
+print(opponent)
