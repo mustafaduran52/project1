@@ -201,6 +201,8 @@ for _ in range(len(opp_teams)):  # Step 2: Loop through opp_teams' length (play 
     played_matches.append(opponent)  # Step 3: Add the chosen opponent to played_matches
     print(f"{your_team} vs {opponent}")  # Step 4: Print the match
 
+opp_teams.remove(opponent)
+
 
 
 opponent = random.choice(opp_teams)
@@ -235,4 +237,4 @@ print(f"We are ready to proceed with the {match}, for the first game of the seas
 
 print("The referee blew the whistle and the game has started! ⌚️ ") 
 
-print(opponent)
+
