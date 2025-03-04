@@ -201,11 +201,9 @@ for _ in range(len(opp_teams)):  # Step 2: Loop through opp_teams' length (play 
     played_matches.append(opponent)  # Step 3: Add the chosen opponent to played_matches
     print(f"{your_team} vs {opponent}")  # Step 4: Print the match
 
-opp_teams.remove(opponent)
 
-
-
-opponent = random.choice(opp_teams)
+while opp_teams:
+    opponent = random.choice(opp_teams)
 chances_ingame = 0
 match_fixture = []
 match_actions = ("goal ⚽️ ", "assist 🤝 ", "foul 🤕 ", "dribbling 💨 ", "tackle 🛝 ", "bad pass 👎🏽 " )
@@ -236,5 +234,51 @@ print(f"We are ready to proceed with the {match}, for the first game of the seas
 
 
 print("The referee blew the whistle and the game has started! ⌚️ ") 
+
+num_events = random.randint(3, chances_ingame)
+
+for _ in range(num_events):
+    time.sleep(1)
+
+    #DECISION MAKING
+    if random.random() < 0.4:
+        print("You have the ball, what are you going to do?")
+        choice = int(input("1: Pass 🤜 , 2: Shoot 💥 , 3: Dribble ⛹🏻‍♂️ "  ("Enter 1, 2 or 3") ))
+
+        if choice == 1: #Pass
+            outcome = random.choice(["Successful pass ✅", "Intercepted pass ❌"])
+            if outcome == "Successful pass ✅":
+                rel_team += 1 #Team likes your playstyle
+                rel_coach += 1 #Coach approves your playstyle
+            elif outcome == "Intercepted pass ❌":
+                rel_team -= 0.5  #Team is not happy with your playstyle
+                rel_coach -= 0.5  #Coach does not approve your your playstyle    
+
+        elif choice == 2: #Shoot
+            outcome = random.choice(["GOALLL ⚽︎🎁", "Wide off the target ❌", "Hits the post! 🥅"])    
+            if outcome == "GOALLL ⚽︎🎁":
+                rel_team += 1 #Your teammates are impressed with your shooting power
+                rel_coach += 1 #Your coach thinks your hard work has paid off
+            elif outcome == "Wide off the target ❌":
+                  rel_team -= 0.5 #Your teammates think you should pass them more
+                  rel_coach -= 0.5 #Your coach is disappointed with your skills
+            else:
+                rel_team = 0 #Your teammates think your were unlucky there
+                rel_coach = 0 #Your coach thinks you were unlucky with the shot
+
+        elif choice == 3: #Dribble
+            outcome = random.choice(["NUTMEG! ⛹🏾‍♂️", "Dribbled past two players! 🤌🏼", "Strong tackle! ❌", "Intercepted by the defense 🥊" ]) 
+            if outcome == "NUTMEG! ⛹🏾‍♂️":
+                rel_team += 0.75 #Your teammates are impressed with your skills
+                rel_coach += 0.75 #Your coach is amazed by your joga bonito
+            elif outcome == "Dribbled past two players! 🤌🏼":
+                rel_team += 1.5 #Your teammates love your take on's!
+                rel_coach += 1.5 #Your coach is a fan of your dribbling
+            elif outcome == "Strong tackle! ❌":
+                rel_team -= 0.5 #Your teammates were open, waiting for your pass
+                rel_coach -= 0.5 #Your coach wants you to be more efficient with the ball
+            else:
+                rel_team -= 0.5 #Your teammates think you had better options than dribbling
+                rel_coach -= 0.5 #Your coach wants you to be more decisive with your actions  
 
 
